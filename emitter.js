@@ -69,7 +69,9 @@ class Namespace {
         namespaceArray.forEach(piece => {
             namespace = namespace.namespaces.get(piece);
         });
-        clearEventsInNamespace(namespace, context);
+        if (namespace) {
+            clearEventsInNamespace(namespace, context);
+        }
     }
 }
 
